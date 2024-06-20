@@ -1,1 +1,99 @@
-echo JkarimS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="focalors.space, Самый главный симп Фурины/Фокалорс JkarimS!">
+    <meta name="yandex-verification" content="88500b833f0ceae9">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор профиля</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        body {
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            zoom: 1;
+            transition: zoom 0.5s ease-in-out; /* Плавное изменение масштаба */
+        }
+
+        #background-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Fontaine';
+            font-size: 150px;
+            color: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+            z-index: -1;
+            display: none; /* Скрыть текст до загрузки шрифта */
+        }
+
+        h1 {
+            color: #ccc;
+            z-index: 1;
+        }
+
+        .profile-buttons {
+            margin-top: 20px; /* Увеличиваем отступ между заголовком и кнопками */
+        }
+
+        .profile-button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Добавляем плавное изменение цвета фона при наведении */
+        }
+
+        .profile-button:hover {
+            background-color: #2e86c1; /* Изменяем цвет фона при наведении */
+        }
+
+        .roblox { background-color: #e74c3c; }
+        .discord { background-color: #7289da; }
+        .telegram { background-color: #0088cc; }
+
+        @media (max-width: 768px) {
+            body {
+                zoom: 0.8; /* Уменьшаем масштаб */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="background-text">Farewell...</div>
+
+    <h1>Выберите профиль:</h1>
+
+    <div class="profile-buttons">
+        <a href="https://www.roblox.com/share?code=52b54ad6c9ef1540a86b591c00760ae2&amp;type=Profile" target="_blank" class="profile-button roblox"><b>Roblox</b></a>
+        <a href="https://discordapp.com/users/649244006177570837" target="_blank" class="profile-button discord"><b>Discord</b></a>
+        <a href="https://t.me/JkarimS" target="_blank" class="profile-button telegram"><b>Telegram</b></a>
+    </div>
+
+    <script>
+        const fontaineFont = new FontFace('Fontaine', 'url(fontaine.ttf)');
+
+        fontaineFont.load().then((loadedFont) => {
+            document.fonts.add(loadedFont);
+            document.getElementById('background-text').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
